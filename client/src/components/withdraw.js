@@ -26,7 +26,7 @@ function Withdraw(){
       email = state.email;
       password = state.password;
     } */
-    fetch(`https://taylortremaine-fullstack2.herokuapp.com/account/login/${email}/${password}`)
+    fetch(`/account/login/${email}/${password}`)
         .then(response => response.text())
         .then(text => {
             try {
@@ -61,7 +61,7 @@ function Withdraw(){
   }
 
   function handleWithdraw() { 
-    fetch(`https://taylortremaine-fullstack2.herokuapp.com/account/update/${email}/${-amount}`)
+    fetch(`/account/update/${email}/${-amount}`)
       .then(response => response.text())
       .then(text => {
           try {

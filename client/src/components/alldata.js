@@ -9,7 +9,7 @@ function AllData(){
     React.useEffect(() => {
         
         // fetch all accounts from API
-        fetch('https://taylortremaine-fullstack2.herokuapp.com/account/all')
+        fetch('/account/all')
             .then(response => response.json())
             .then(data => {
                 console.log(data);

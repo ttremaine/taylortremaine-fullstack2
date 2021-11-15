@@ -61,7 +61,7 @@ function Deposit(){
   }
 
   function handleDeposit() { 
-    fetch(`https://taylortremaine-fullstack2.herokuapp.com/account/update/${email}/${amount}`)
+    fetch(`/account/update/${email}/${amount}`)
       .then(response => response.text())
       .then(text => {
           try {
