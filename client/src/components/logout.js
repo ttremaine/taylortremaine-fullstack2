@@ -54,7 +54,7 @@ function Logout(){
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
 
-    fetch(`/account/login/${email}/${password}`)
+    fetch(`https://taylortremaine-fullstack2.herokuapp.com/account/login/${email}/${password}`)
       .then(response => response.text())
       .then(text => {
           try {
