@@ -1,10 +1,15 @@
 const { MongoClient } = require('mongodb');
 const url         = 'mongodb+srv://admin:kYGq6vU8lPCrQTui@cluster0.qfhsi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-const client      = new MongoClient(url, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,    
+
+let db            = null;
+
+// connect to mongo
+MongoClient.connect(url, {useUnifiedTopology: true}, function(err, client) {
+    console.log("Connected successfully to db server");
+
+    // connect to myproject database
+    db = client.db('myproject');
 });
-let _db;
 
 // create user account
 function create(name, email, password){
