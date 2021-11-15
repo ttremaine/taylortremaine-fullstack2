@@ -1,5 +1,5 @@
 const { MongoClient } = require('mongodb');
-const url         = process.env.ATLAS_URI;
+const url         = 'mongodb+srv://admin:kYGq6vU8lPCrQTui@cluster0.qfhsi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 const client      = new MongoClient(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true,    

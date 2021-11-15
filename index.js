@@ -1,18 +1,19 @@
-const express = require('express');
-const app     = express();
-const cors    = require('cors');
-require('dotenv').config({ path: './config.env' });
-const dal     = require('./db/dal.js');
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const path = require("path");
+const dal     = require('./dal.js');
+const e = require('express');
 
 
 
 // used to serve static files from public directory
-//app.use(express.json);
+app.use(express.static('client/build)'));
 app.use(cors());
 //app.use(require('./routes/users'));
 
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+//const path = require('path');
+//app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {
