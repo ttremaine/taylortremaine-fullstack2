@@ -26,7 +26,7 @@ function Deposit(){
       email = state.email;
       password = state.password;
     } */
-    fetch(`https://taylortremaine-fullstack2.herokuapp.com/account/login/${email}/${password}`)
+    fetch(`/account/login/${email}/${password}`)
         .then(response => response.text())
         .then(text => {
             try {
