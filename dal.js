@@ -1,6 +1,6 @@
 const { MongoClient } = require('mongodb');
 const url         = 'mongodb+srv://admin:kYGq6vU8lPCrQTui@cluster0.qfhsi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
-
+//const url = 'mongodb://localhost:27017';
 let db            = null;
 
 // connect to mongo
@@ -77,7 +77,7 @@ function all(){
 
  
 module.exports = {
-    connectToServer: function (callback) {
+    /*connectToServer: function (callback) {
         client.connect(function (err, db) {
             if (db)
             {
@@ -90,7 +90,7 @@ module.exports = {
 
     getDb: function () {
         return _db;
-    },
+    },*/
 
     create, findOne, find, update, all,
 };
