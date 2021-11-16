@@ -76,22 +76,4 @@ function all(){
 }
 
  
-module.exports = {
-    /*connectToServer: function (callback) {
-        client.connect(function (err, db) {
-            if (db)
-            {
-                _db = db.db("myFirstDatabase");
-                console.log("Successfully connected to MongoDB.");
-            }
-            return callback(err);
-        });
-    },
-
-    getDb: function () {
-        return _db;
-    },*/
-
-    create, findOne, find, update, all,
-};
-
+module.exports = {create, findOne, find, update, all};
