@@ -8,12 +8,12 @@ const e = require('express');
 
 
 // used to serve static files from public directory
-app.use(express.static('client/build)'));
+//app.use(express.static('client/build)'));
 app.use(cors());
 //app.use(require('./routes/users'));
 
 //const path = require('path');
-//app.use(express.static(path.join(__dirname, 'client', 'build')));
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // create user account
 app.get('/account/create/:name/:email/:password', function (req, res) {
@@ -105,9 +105,9 @@ app.get('/account/all', function (req, res) {
     });
 });
 
-/*app.get("*", (req, res) => {
+app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});*/
+});
 
 //port
 const PORT = process.env.PORT || 5000;
