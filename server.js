@@ -105,9 +105,9 @@ app.get('/account/all', function (req, res) {
     });
 });
 
-app.get("*", (req, res) => {
+/*app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+});*/
 
 //port
 const PORT = process.env.PORT || 5000;
